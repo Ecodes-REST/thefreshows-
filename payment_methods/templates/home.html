@@ -1,0 +1,63 @@
+<h1>FRESHOWS GOT EVERYTHING YOU WANT AND THE SOUNDS OF OUR VOICES TO LIFE</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Freshows Payment Gateway </title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="number"] {
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .stripe-button-el {
+      background-color: #008cdd;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Freshows Payment Gateway (USD)</h1>
+    <form action="/charge/" method="post">
+      {% csrf_token %}
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{ key }}"
+        data-description="Freshows service payment gateway"
+        data-amount="<%= amount * 100 %>"
+        data-locale="auto">
+      </script>
+      <input type="number" name="amount" placeholder="Enter amount">
+    </form>
+  </div>
+</body>
+</html>
+  

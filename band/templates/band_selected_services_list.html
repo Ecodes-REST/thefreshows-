@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2> Services Ordered </h2>
+
+
+{% for band in services ordered %}
+<div class="card p-2 d-flex flex-row align-items-center">
+    <div class="col-10">{{availableservice.band_package}} - {{availableservice.additional_services}} - {{availableservice.additional_service_price}} USD</div>
+    <div class="col-2">
+        {% if availableservice.is_unlocked %}
+        <a class="btn btn-sucess" href="{% url 'band_selected_services_details' %}"></a>
+
+</div>
+{% endblock %}
