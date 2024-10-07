@@ -2,7 +2,7 @@ import os
 import dj_database_url
 from .common import *
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['freshowband.fly.dev/']
 
 DEBUG = False
 
