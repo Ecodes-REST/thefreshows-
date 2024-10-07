@@ -20,6 +20,8 @@ django-redis = "*"
 whitenoise = "*"
 gunicorn = "*"
 stripe = "*"
+dj-database-url = "*"
+django-silk = "*"
 
 [dev-packages]
 pytest = "*"
