@@ -14,6 +14,11 @@ DATABASES = {
     'default': dj_database_url.config('postgres://freshowband:rNyTUStdYQYyjSi@freshowband-db.flycast:5432/freshowband?sslmode=disable')
 }
 
+
+if os.getenv('FLY_REGION') is None:
+    # This is not a Fly.io deployment, so use the dev settings
+    from .dev import *
+
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
