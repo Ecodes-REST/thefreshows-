@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for freshowband-broken-smoke-4577 on 2024-10-08T02:40:01+03:00
+# fly.toml app configuration file generated for freshowband on 2024-10-09T02:32:23+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'freshowband-broken-smoke-4577'
+app = 'freshowband'
 primary_region = 'jnb'
 console_command = '/code/manage.py shell'
 
@@ -14,7 +14,6 @@ console_command = '/code/manage.py shell'
 
 [env]
   PORT = '8000'
-  DATABASE_URL = "postgres://freshowband:rNyTUStdYQYyjSi@freshowband-db.flycast:5432/freshowband?sslmode=disable"
 
 [processes]
   app = 'gunicorn --bind :8000 --workers 2 FRESHOWBAND.wsgi'
