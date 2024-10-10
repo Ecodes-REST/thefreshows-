@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for freshowband on 2024-10-10T14:15:18+03:00
+# fly.toml app configuration file generated for freshowband on 2024-10-10T14:28:04+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'freshowband'
-primary_region = 'jnb'
+primary_region = 'lhr'
 console_command = '/code/manage.py shell'
 
 [build]
