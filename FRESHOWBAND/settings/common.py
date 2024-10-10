@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'payment_methods',
     'reviews',
     'core',
-    'FRESHOWBAND.dev',
-    'FRESHOWBAND.prod',
+    'FRESHOWBAND.settings.dev',
+    'FRESHOWBAND.settings.prod',
 ]
 
 MIDDLEWARE = [
