@@ -11,7 +11,7 @@ CELERY_BROKER_URL= REDIS_URL
 
 
 DATABASES = {
-    'default': dj_database_url.config('postgres://freshowband:rNyTUStdYQYyjSi@freshowband-db.flycast:5432/freshowband?sslmode=disable')
+    'default': dj_database_url.config('postgres://postgres:Y6vRZj2ewnS9utNm@db.rutkjaiisvqklxblhrvb.supabase.co:5432/postgres?sslmode=require')
 }
 
 
