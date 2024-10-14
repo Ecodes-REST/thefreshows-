@@ -11,7 +11,7 @@ CELERY_BROKER_URL= REDIS_URL
 
 
 DATABASES = {
-    'default': dj_database_url.config(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(os.environ.get('DATABASE_URL')) 
 }
 
 
