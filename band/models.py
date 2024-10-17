@@ -108,7 +108,7 @@ class ClientPerformanceDetail(models.Model):
     show_title = models.CharField(max_length=255)
     slug = models.SlugField()
     description = models.TextField()
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1)
+    client_issuing = models.OneToOneField(Client, on_delete= models.CASCADE)
     created_at = models.DateTimeField(auto_now_add= True)
     updated_at = models.DateTimeField(auto_now= True)
 

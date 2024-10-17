@@ -122,7 +122,8 @@ class ClientAdmin(admin.ModelAdmin):
 
 @admin.register(models.ClientPerformanceDetail)
 class ClientPerformanceDetailAdmin(admin.ModelAdmin):
-    list_display = ['show_title', 'description', 'created_at', 'updated_at']
+    autocomplete_fields = ['client_issuing']
+    list_display = ['show_title', 'description', 'client_issuing','created_at', 'updated_at']
     prepopulated_fields ={
         'slug':['show_title']
     }
