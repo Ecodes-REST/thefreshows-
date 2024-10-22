@@ -2,7 +2,7 @@ import os
 import dj_database_url
 from .common import *
 
-ALLOWED_HOSTS = ['worker-production-09bb.up.railway.app']
+ALLOWED_HOSTS = ['thefreshows-production.up.railway.app']
 
 DEBUG = False
 
@@ -33,5 +33,5 @@ STRIPE_PUBLISHABLE_KEY= os.environ.get('STRIPE_PUBLISHABLE_KEY')
 SESSION_COOKIE_SECURE= True
 CSRF_COOKIE_SECURE= True
 CSRF_COOKIE_SAMESITE = 'Lax'
-CSRF_TRUSTED_ORIGINS = ['https://worker-production-09bb.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://thefreshows-production.up.railway.app']
 
