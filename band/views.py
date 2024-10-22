@@ -113,8 +113,8 @@ class ClientPerformanceViewSet(ModelViewSet):
     serializer_class= ClientPerformanceDetailSerializer
     filter_backends= [SearchFilter, OrderingFilter]
     permission_classes= [IsClient]
-    search_fields= ['show_title']
-    ordering_fields= ['show_title', 'created_at']
+    search_fields= ['show_title', 'client_issuing']
+    ordering_fields= ['show_title', 'created_at', 'client_issuing']
 
 
   

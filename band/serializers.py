@@ -75,7 +75,7 @@ class ClientPerformanceDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ClientPerformanceDetail 
-        fields = ['id', 'user_id', 'show_title', 'description', 'created_at', 'updated_at']
+        fields = ['id', 'user_id', 'client_issuing', 'show_title', 'description', 'created_at', 'updated_at']
 
 
     def create(self, validated_data): 
