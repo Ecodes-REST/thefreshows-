@@ -1,0 +1,15 @@
+#stripe-button {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #stripe-button:hover {
+    background-color: #357ae8;
+  }
+  
