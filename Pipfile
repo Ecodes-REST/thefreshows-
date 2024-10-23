@@ -22,7 +22,6 @@ gunicorn = "*"
 stripe = "*"
 dj-database-url = "*"
 django-silk = "*"
-psycopg2-binary = "*"
 
 [dev-packages]
 pytest = "*"
