@@ -4,7 +4,6 @@ FROM python:${PYTHON_VERSION}
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV DATABASE_URL=postgresql://postgres:lOpLRRyuOrdsOqTHrRAFzSKRWuIIfEIh@postgres.railway.internal:5432/railway
 
 # install psycopg2 dependencies.
 RUN apt-get update && apt-get install -y \
@@ -22,5 +21,7 @@ RUN pipenv install --deploy --system
 COPY . /code
 
 EXPOSE 8000
+
+ENV DATABASE_URL=postgresql://postgres:lOpLRRyuOrdsOqTHrRAFzSKRWuIIfEIh@postgres.railway.internal:5432/railway
 
 CMD ["gunicorn","--bind",":8000","--workers","2","FRESHOWBAND.wsgi"]
