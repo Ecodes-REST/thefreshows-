@@ -10,9 +10,7 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     gcc \
     && rm -rf /var/lib/apt/lists/*
-
-RUN python manage.py makemigrations
-RUN python manage.py migrate    
+ 
 
 RUN mkdir -p /code
 
