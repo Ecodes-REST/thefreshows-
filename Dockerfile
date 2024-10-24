@@ -13,8 +13,12 @@ RUN apt-get update && apt-get install -y \
  
 
 RUN mkdir -p /code
+# Set the working directory to the subdirectory that contains the manage.py file
+WORKDIR /home/e_mollz/FRESHOWBAND/
 
-WORKDIR /code
+# Run makemigrations and migrate commands
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 
 RUN pip install pipenv
 COPY Pipfile Pipfile.lock /code/
