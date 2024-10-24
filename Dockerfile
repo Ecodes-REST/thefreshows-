@@ -13,9 +13,8 @@ RUN apt-get update && apt-get install -y \
  
 
 RUN mkdir -p /code
-# Set the working directory to the subdirectory that contains the manage.py file
-WORKDIR /home/e_mollz/FRESHOWBAND/
 
+WORKDIR /code
 
 RUN pip install pipenv
 COPY Pipfile Pipfile.lock /code/
